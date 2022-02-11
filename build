@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pandoc -o Edition-Image-Poisson.pdf Edition-Image-Poisson.md
+pandoc -o Edition-Image-Poisson-court.pdf Edition-Image-Poisson-court.md
+
