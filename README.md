@@ -1,5 +1,5 @@
 # Edition d'images de Poisson
-## Sébastien Boisgérault, MINES ParisTech
+### Sébastien Boisgérault, MINES ParisTech
 
 
 ![La photo ci-dessus a subi une retouche significative. Mais laquelle ? (Réponse dans la suite) ](images/objects-final.jpeg)
