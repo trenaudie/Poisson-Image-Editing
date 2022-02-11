@@ -2,7 +2,9 @@
 ### Sébastien Boisgérault, MINES ParisTech
 
 
-![La photo ci-dessus a subi une retouche significative. Mais laquelle ? (Réponse dans la suite) ](images/objects-final.jpeg)
+*La photo ci-dessous a subi une retouche significative. Mais laquelle ? (Réponse dans la suite)* 
+
+![](images/objects-final.jpeg)
 
 Contexte
 --------------------------------------------------------------------------------
@@ -31,13 +33,17 @@ images comme des fonctions $u$ de variables continues $x, y \in \mathbb{R}$.
 On cherche alors à résoudre l'équation de Poisson $\Delta u(x, y) = 0$ avec des
 conditions au bord de type Dirichlet, un problème bien connu des physiciens.
 
-![L'image originale ci-dessus comportait un objet supplémentaire : une montre.
+--------------------------------------------------------------------------------
+
+*L'image originale ci-dessus comportait un objet supplémentaire : une montre.
 Elle a été recouverte dans l'image retouchée par des greffons prélevés dans une zone sans objet, 
 de même texture que le reste de l'arrière plan. La technique de Poisson
 utilisée ne laisse aucune trace de "couture" sur les bords de la greffe, 
 ce qui rend la retouche assez crédible. 
 ([Photographie originale par Vadim Sherbakov](https://unsplash.com/photos/tCICLJ5ktBE), 
-[licence Unsplash Creative Commons Zero](https://unsplash.com/license))](images/objects.jpeg)
+[licence Unsplash Creative Commons Zero](https://unsplash.com/license))*
+
+![](images/objects.jpeg)
 
 
 
