@@ -35,7 +35,7 @@ conditions au bord de type Dirichlet, un problème bien connu des physiciens.
 
 --------------------------------------------------------------------------------
 
-*L'image originale ci-dessus comportait un objet supplémentaire : une montre.
+*L'image originale (ci-dessous) comportait un objet supplémentaire : une montre.
 Elle a été recouverte dans l'image retouchée par des greffons prélevés dans une zone sans objet, 
 de même texture que le reste de l'arrière plan. La technique de Poisson
 utilisée ne laisse aucune trace de "couture" sur les bords de la greffe, 
