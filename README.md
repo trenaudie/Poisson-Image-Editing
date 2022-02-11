@@ -1,6 +1,6 @@
-% Edition d'images de Poisson
-% Sébastien Boisgérault, MINES ParisTech
-% 19 janvier 2021
+# Edition d'images de Poisson
+## Sébastien Boisgérault, MINES ParisTech
+
 
 ![La photo ci-dessus a subi une retouche significative. Mais laquelle ? (Réponse dans la suite) ](images/objects-final.jpeg)
 
