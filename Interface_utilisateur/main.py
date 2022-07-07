@@ -41,8 +41,21 @@ def target_sky():
 def target_forest():
     target_image[0] = 'web/images/imageforêt.jpeg'
 
+@eel.expose 
+def algo_min():
+    algo[0] = 'min'
+
+@eel.expose 
+def algo_max():
+    algo[0] = 'max'
+
+
 @eel.expose
 def run():
-    poisson_image.solve_derivatives_max(source_image[0], target_image[0])
+    if algo[0] == 'max':
+        poisson_image.solve_derivatives_max(source_image[0], target_image[0])
+    if algo[0] == 'min':
+        poisson_image.solve_derivatives_max(source_image[0], target_image[0])
+
 
 eel.start("index.html")
