@@ -2,13 +2,7 @@
 from PIL import Image, ImageTk
 import numpy as np
 import matplotlib.pyplot as plt
-import logging
-logging.basicConfig(level = logging.INFO, format = "%(threadName)s - %(message)s")
-import scipy.sparse as sc
-from scipy.sparse.linalg import spsolve
-import threading
-import psutil
-import time
+
 
 import tkinter as tk
 SCREEN_WIDTH = 1400
