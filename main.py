@@ -1,16 +1,21 @@
 import eel
-from random import randint
+import poisson_image
 
 eel.init("web")
 
 # Exposing the random_python function to javascript
-import_image = 
+source_image = ['figs/requin2.jpeg']
 
 @eel.expose
-def random_python():
+def sourceshark():
     print("Random function running")
-    return randint(1, 100)
+    source_image[0] = 'figs/requins.jpeg'
+    print(source_image[0])
 
 
-# Start the index.html file
+@eel.expose
+def f():
+    poisson_image.solve_derivatives_max()
+
+
 eel.start("index.html")
