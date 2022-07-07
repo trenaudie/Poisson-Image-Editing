@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 import logging
 import scipy.sparse as sc
 from scipy.sparse.linalg import spsolve
-from PIL import Image, ImageTk
+from PIL import Image
 import tkinter as tk
-from user_ui import tkinter_img_large
+from testingtkinter import tkinter_img_large
 
-from base_objects import make_b_derivatives, lapAfinal2, rebuild_u, make_b_max
+from base_objects import lapAfinal2, rebuild_u, make_b_max
 
 SCREEN_WIDTH = 1400
 SCREEN_HEIGHT = 850

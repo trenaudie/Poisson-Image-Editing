@@ -1,75 +1,70 @@
+#TESTING TKINTER WITH A DIFFERENT SIZE IMAGE
 from PIL import Image, ImageTk
 import numpy as np
 import matplotlib.pyplot as plt
-import logging
-logging.basicConfig(level = logging.INFO, format = "%(threadName)s - %(message)s")
-import scipy.sparse as sc
-from scipy.sparse.linalg import spsolve
-import threading
-import psutil
-import time
+
 
 import tkinter as tk
+SCREEN_WIDTH = 1400
+SCREEN_HEIGHT = 850
 
-img = Image.open("images/objects-final.jpeg")
+half_width = SCREEN_WIDTH//2-10
+half_height = SCREEN_HEIGHT//2-10
 
 
-def tkinter_img(img:Image.Image):
+
+def tkinter_img_large(img1:Image.Image, img2:Image.Image ):
+   assert(img1) #source image but uncropped
+   assert(img2) #target image but uncropped
    window = tk.Tk()
-   window.maxsize(1200,800)
-   window.geometry("1200x1200")
-   frame0 = tk.Frame(height = 300, bg = "white")
+   #window.geometry("1700x800")
+   window.maxsize(SCREEN_WIDTH,SCREEN_HEIGHT)
+   frame0 = tk.Frame(height = 5, bg = "white", master = window)
    frame0.pack()
-   label0 = tk.Label(master = frame0, text="Click twice to select a source image")
-   label0.pack()
-
-
-   frame = tk.Frame(height=450, width=350, master=window)
-   frame.pack()
-   #frame.place(relx =0.1, rely = 0.1)
-   img = img.resize((1200,800))
-   imgtk = ImageTk.PhotoImage(img)
-   label = tk.Label(frame, image = imgtk)
-   label.pack()
+   label0 = tk.Label(master = frame0, text="Click twice on the image to select a source image")
+   label0.pack(side = 'top')
+   frame1 = tk.Frame(height=SCREEN_HEIGHT, width=SCREEN_WIDTH, master=window)
+   frame1.pack(side='top', fill='both', expand=True)
+   img1 = img1.resize((SCREEN_WIDTH,SCREEN_HEIGHT))
+   imgtk1= ImageTk.PhotoImage(img1, master = window)
+   label1 = tk.Label(frame1, image = imgtk1)
+   label1.pack()
+   
+   window2 = tk.Toplevel(master = window)
+   frame02 = tk.Frame(height = 5, bg = "white", master = window2)
+   frame02.pack(side='top', fill='both', expand=True)
+   label02 = tk.Label(master = frame02, text="Click once on the image to select a destination image")
+   label02.pack(side = 'top')
+   frame2 = tk.Frame(height=SCREEN_HEIGHT, width=SCREEN_WIDTH, master=window2)
+   frame2.pack()
+   img2 = img2.resize((SCREEN_WIDTH,SCREEN_HEIGHT))
+   imgtk2 =  ImageTk.PhotoImage(img2, master = window2)
+   label2 = tk.Label(frame2, image = imgtk2)
+   label2.pack()
+   window2.maxsize(SCREEN_WIDTH,SCREEN_HEIGHT)
+   
    sourcepos = []
    destpos= []
-   def source_handler(event):
-      sourcepos.append(event.y)
-      sourcepos.append(event.x)
-
-      print(f"mouse clicked at pos {sourcepos[-2:]}!")
    def dest_handler(event):
-      destpos.append(event.y)
       destpos.append(event.x)
+      destpos.append(event.y)
+      assert(len(destpos) == 2)
+      window.destroy()
+      
 
-      print(f"mouse clicked at pos {destpos[-2:]}!")
-   label.bind("<Button-1>", source_handler)
-
-   def thread_function():
-      while True:
-         if len(sourcepos) == 4:
-            label.unbind('<Button-1>')
-            newimg = img.crop((sourcepos[1],sourcepos[0], sourcepos[3], sourcepos[2]))
-            """for proc in psutil.process_iter():
-               if proc.name() == "display":
-                  proc.kill() """
-            newimg.show()
-            label0.configure(text="Click once to select destination position")
-            label0.pack()
-            label.unbind('<Button-1>')
-            label.bind('<Button-1>',dest_handler)
-            break
-      while True:
-         if len(destpos) == 2:
-            print("destination position obtained: ", destpos)
-            break
-            
-   t = threading.Thread(target = thread_function  )
-   t.start()
-
+   def source_handler(event):
+      sourcepos.append(event.x)
+      sourcepos.append(event.y)
+      if len(sourcepos) >= 4:
+         label0.config(text = 'Thank you. Switch to other window.')
+         label1.unbind('<Button-1>')
+         label2.bind('<Button-1>',dest_handler)
+   
+   label1.bind("<Button-1>", source_handler)
    window.mainloop()
-   t.join()
+            
+   if len(destpos) == 2 : 
+      return sourcepos,destpos
+   else:
+      raise TimeoutError('No Location for Destination Detected.')
 
-
-
-tkinter_img(img)
