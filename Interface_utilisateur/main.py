@@ -55,7 +55,7 @@ def run():
     if algo[0] == 'max':
         poisson_image.solve_derivatives_max(source_image[0], target_image[0])
     if algo[0] == 'min':
-        poisson_image.solve_derivatives_max(source_image[0], target_image[0])
+        poisson_image.solve_derivatives_min(source_image[0], target_image[0])
 
 
 eel.start("index.html")
