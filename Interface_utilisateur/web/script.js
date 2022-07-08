@@ -26,13 +26,13 @@ document.querySelector("#statue").onclick = function () {
 
 document.querySelector("#forest").onclick = function () {
     eel.target_forest()(function () {
-        document.querySelector(".choice2").innerHTML = "Choice : Ocean";
+        document.querySelector(".choice2").innerHTML = "Choice : Forest";
     })
 }
 
 document.querySelector("#ocean").onclick = function () {
     eel.target_ocean()(function () {
-        document.querySelector(".choice2").innerHTML = "Choice : Forest";
+        document.querySelector(".choice2").innerHTML = "Choice : Ocean";
     })
 }
 
