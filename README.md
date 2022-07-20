@@ -91,8 +91,17 @@ Technologies
   
   - Python Imaging Library (PIL/[Pillow](https://pillow.readthedocs.io)),
   
-  - [Cython](https://cython.org/).
+Interface utilisateur - fichier tests
+--------------------------------------------------------------------------------
+Voir le fichier _Interface_utilisateur_. 
+On vous propose de tester l'algorithme. Il s'agit de coller quelques images (requin, oiseau, etc..) dans un fond choisi par l'utilisateur (ocean, ciel, etc..) 
 
+Conseils: choisir un rectangle aussi petit que possible pour l'image source. Ceci réduit les temps de calcul, qui sont quadratiques par rapport à la taille en longueur ou largeur de l'image source. Attendre un temps de calcul d'environ 1-2min. 
+
+Document de suivi - présentation du projet
+--------------------------------------------------------------------------------
+Voir le fichier _latex_.
+On y présente un suivi de notre projet, les problèmes et équations considérés, et les solutions implémentées, ainsi que quelqeus résultats.
 
 
 Références
