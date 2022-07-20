@@ -4,7 +4,7 @@
 
 *La photo ci-dessous a subi une retouche significative. Mais laquelle ? (Réponse dans la suite)* 
 
-![](images/objects-final.jpeg)
+![](figs/objects-final.jpeg)
 
 Contexte
 --------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ ce qui rend la retouche assez crédible.
 ([Photographie originale par Vadim Sherbakov](https://unsplash.com/photos/tCICLJ5ktBE), 
 [licence Unsplash Creative Commons Zero](https://unsplash.com/license))*
 
-![](images/objects.jpeg)
+![](figs/objects.jpeg)
 
 
 
