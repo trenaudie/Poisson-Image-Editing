@@ -7,6 +7,8 @@ Choisir quelle image source et target que l'on désire, puis la fonctionnalité 
 Dans la première fenêtre qui s'affiche, choisir l'élément à envoyer sur l'image target avec deux clics de manière à former un rectangle.
 Dans la deuxième, choisir ou coller l'image source.
 
-Ceci est une version alpha de l'interface utilisateur. On pourra théoriquement choisir n'importe quelle image. Par ailleurs, l'implementation erase est mal implantée car necessiterait d'inverser source et target.
-En effet, afin d'erase, il faut choisir une aone "vide" (comme de l'eau) dans la source, puis choisir l'élément à supprimer dans la target.
+Ceci est une version alpha de l'interface utilisateur. On pourra théoriquement choisir n'importe quelle image.
+Par ailleurs, la fontionnalité erase est mal implantée car necessiterait d'inverser source et target.
+En effet, afin d'erase, il faut choisir une zone "vide" (comme de l'eau) dans la source, puis choisir 
+l'élément à supprimer dans la target.
 

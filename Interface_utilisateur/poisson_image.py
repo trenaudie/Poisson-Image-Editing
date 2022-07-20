@@ -139,3 +139,4 @@ def solve_derivatives_min(source_path, target_path):
    target.paste(final_img, (target_x, target_y))
    target.show()
    axes[5].imshow(target)
+
