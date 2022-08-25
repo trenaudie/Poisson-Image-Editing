@@ -4,7 +4,7 @@
 
 ![](figs/objects-final.jpeg)
 
-Contexte
+Context
 --------------------------------------------------------------------------------
 
 The Poisson Image Editing Algorithm alows us to:
@@ -59,7 +59,7 @@ Project presentation and results
 See *Edition_d_image_de_Poisson.pdf*.
 This document presents the theoretical approch, then the numerical implementation of the project, and finally our results
 
-Références
+References
 --------------------------------------------------------------------------------
 
   - [**Poisson image editing.** P. Pérez, M. Gangnet, A. Blake. 
