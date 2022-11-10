@@ -2,8 +2,6 @@
 ### Poisson Image Editing
 
 
-![](figs/objects-final.jpeg)
-
 Context
 --------------------------------------------------------------------------------
 
@@ -26,6 +24,7 @@ $\Delta u(x,y) = 0$ with boundary conditions.
 
 ![](figs/objects.jpeg)
 
+![](figs/objects-final.jpeg)
 
 
 Objectives
